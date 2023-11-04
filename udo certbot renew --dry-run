@@ -1,0 +1,7 @@
+[0;1;32m●[0m certbot.timer - Run certbot twice daily
+     Loaded: loaded (/lib/systemd/system/certbot.timer; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (waiting)[0m since Mon 2022-10-10 05:55:12 UTC; 3min 28s ago
+    Trigger: Mon 2022-10-10 12:49:58 UTC; 6h left
+   Triggers: ● certbot.service
+
+Oct 10 05:55:12 letsplan-dev systemd[1]: Started Run certbot twice daily.

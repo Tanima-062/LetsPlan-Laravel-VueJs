@@ -1,0 +1,90 @@
+<template>
+    <div class="search">
+        <svg
+            width="28"
+            height="28"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M29.2727 31.394L30.3333 32.4547L32.4547 30.3333L31.394 29.2727L29.2727 31.394ZM24.3995 22.2782L23.3388 21.2175L21.2175 23.3388L22.2782 24.3995L24.3995 22.2782ZM14.5 25.5C8.42487 25.5 3.5 20.5751 3.5 14.5H0.5C0.5 22.232 6.76801 28.5 14.5 28.5V25.5ZM3.5 14.5C3.5 8.42487 8.42487 3.5 14.5 3.5V0.5C6.76801 0.5 0.5 6.76801 0.5 14.5H3.5ZM14.5 3.5C20.5751 3.5 25.5 8.42487 25.5 14.5H28.5C28.5 6.76801 22.232 0.5 14.5 0.5V3.5ZM25.5 14.5C25.5 20.5751 20.5751 25.5 14.5 25.5V28.5C22.232 28.5 28.5 22.232 28.5 14.5H25.5ZM31.394 29.2727L24.3995 22.2782L22.2782 24.3995L29.2727 31.394L31.394 29.2727Z"
+                fill="#063F5F"
+            />
+        </svg>
+        <input
+            type="text"
+            name="search"
+            id="search-input"
+            ref="search_input"
+            @input="search($event.target.value)"
+            :placeholder="placeholder"
+        >
+    </div>
+
+</template>
+
+<script>
+export default {
+    props: {
+        placeholder: {
+            type: String,
+            required: true,
+        },
+        column: {
+            type: String,
+            default: "search",
+        },
+        routeName: {
+            type: String,
+            required: true,
+        }
+    },
+    emits: ['searchResult'],
+
+    methods: {
+        search(value) {
+            this.setFilterToQueryString(value)
+        },
+
+        setFilterToQueryString(value) {
+            const params = new URLSearchParams(location.search)
+            if (value) {
+                params.append(this.column, value)
+            } else {
+                params.delete(this.column)
+            }
+
+            this.$router.push({ name: this.route, query: Object.fromEntries(params) })
+            this.$emit('updateResult')
+        }
+    },
+
+    mounted() {
+        const params = new URLSearchParams(location.search)
+        this.$refs.search_input.value = params.get(this.column) || ''
+    },
+}
+
+</script>
+
+<style lang="scss" scoped>
+.search {
+    display: flex;
+    background-color: white;
+    min-width: 888px;
+    width: 75%;
+    height: 48px;
+    padding: 9px;
+
+    #search-input {
+        font-family: 'Nexa';
+        color: #4C85A7;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        outline: none;
+
+    }
+}
+</style>

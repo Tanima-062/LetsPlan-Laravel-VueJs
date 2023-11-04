@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Bold.eot');
+    src: url('Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-Bold.woff2') format('woff2'),
+        url('Nexa-Bold.woff') format('woff'),
+        url('Nexa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Regular.eot');
+    src: url('Nexa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-Regular.woff2') format('woff2'),
+        url('Nexa-Regular.woff') format('woff'),
+        url('Nexa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

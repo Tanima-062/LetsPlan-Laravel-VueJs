@@ -1,0 +1,143 @@
+.user-form-registration {
+    .form-control {
+        height: 30px;
+        line-height: 30px;
+        background: #F8FBFA;
+    }
+}
+
+.user-personal-info {
+    .form-control {
+        height: 40px;
+        line-height: 40px;
+        background: #F8FBFA;
+        width: 206px;
+    }
+}
+
+.button-group {
+    background: #AEC90B;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+    display: flex;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 8px 15px;
+    background: #AEC90B;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+.plus {
+    padding: 11px;
+}
+
+.btn-title-group {
+    padding: 10px;
+    align-self: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.button-group:hover {
+    background: #8ca008;
+}
+
+.vertical-line {
+    border-left: 0.5px solid white;
+}
+
+.supervisor-card-wrapper {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 30px;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.form-input-bordered {
+    width: 100%;
+}
+
+.role-select {
+    width: 30%;
+}
+
+.phone-input {
+    border-top-left-radius: unset !important;
+    border-bottom-left-radius: unset !important;
+}
+
+.phone-select {
+    background: #E3E9EB;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #727574;
+    border-right: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #42474A;
+}
+
+.user-form-registration {
+    position: relative;
+}
+
+.horizontal-line {
+    border-top: 1px solid #C2C5C6;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.form-width-fixed {
+    width: 206px;
+}
+
+.text-content {
+    max-width: 420px;
+    width: 100%;
+    padding-right: 58px;
+}
+
+.user-personal-info {
+    width: 62%;
+}
+
+.text-description {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #727574;
+}
+
+.text-title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #42474A;
+    margin-bottom: 10px;
+    a{
+        color: #42474A;
+        text-decoration: none;
+    }
+}
+
+.supervisor-section {
+    overflow: auto;
+    min-height: 310px;
+}
